@@ -14,11 +14,11 @@
 </head>
 
 <body>
-    <div class="conatiner">
-        <form action="/employees/save" th:object="${anEmployee}" method="POST">
-            <input type="text" placeholder="Employee firstName" th:field="${anEmployee.firstName}">
-            <input type="text" placeholder="Employee lastName" th:field="${anEmployee.lastName}">
-            <input type="text" placeholder="Employee email" th:field="${anEmployee.email}">
+    <div class="container">
+        <form action="/employees/save" th:object="${employee}" method="POST">
+            <input type="text" placeholder="Employee firstName" th:field="${employee.firstName}">
+            <input type="text" placeholder="Employee lastName" th:field="${employee.lastName}">
+            <input type="text" placeholder="Employee email" th:field="${employee.email}">
 
             <button type="submit">Create employee</button>
 
