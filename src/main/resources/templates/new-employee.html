@@ -15,10 +15,10 @@
 
 <body>
     <div class="conatiner">
-        <form action="/employees/save" method="POST">
-            <input type="text" placeholder="Employee firstName">
-            <input type="text" placeholder="Employee lastName">
-            <input type="text" placeholder="Employee email">
+        <form action="/employees/save" th:object="${anEmployee}" method="POST">
+            <input type="text" placeholder="Employee firstName" th:field="${anEmployee.firstName}">
+            <input type="text" placeholder="Employee lastName" th:field="${anEmployee.lastName}">
+            <input type="text" placeholder="Employee email" th:field="${anEmployee.email}">
 
             <button type="submit">Create employee</button>
 
