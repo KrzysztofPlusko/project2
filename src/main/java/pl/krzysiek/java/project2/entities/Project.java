@@ -1,5 +1,8 @@
 package pl.krzysiek.java.project2.entities;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Project {
 
     private long projectId;
