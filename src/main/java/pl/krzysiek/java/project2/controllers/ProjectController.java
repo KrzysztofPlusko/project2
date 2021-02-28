@@ -25,6 +25,7 @@ public class ProjectController {
         List<Project> projects = proRepo.findAll();
         model.addAttribute("projects", projects);
         return "projects/list-projects";
+    }
 
     @GetMapping("/new")
     public String diplayProjectForm(Model model) {
