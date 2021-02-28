@@ -9,12 +9,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import pl.krzysiek.java.project2.dto.IEmployeeRepository;
 import pl.krzysiek.java.project2.entities.Employee;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/employees")
 public class EmployeeController {
 
     @Autowired
     IEmployeeRepository empRepo;
+
+    @GetMapping
+    public String displayEmployees(Model model) {
+
+        List<Employee> employees = empRepo.findAll();
+        model.addAttribute("employees", employees);
+        return "employees/list-employees";
+    }
 
     @GetMapping("/new")
     public String displayEmployeeForm(Model model) {
