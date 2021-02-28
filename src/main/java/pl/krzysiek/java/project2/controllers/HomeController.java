@@ -20,7 +20,7 @@ public class HomeController {
     public String displayHome(Model model) {
 
         List<Project> projects =  proRepo.findAll();
-        model.addAttribute("projects",projects);
+        model.addAttribute("projectsList",projects);
         return "home";
     }
 }
