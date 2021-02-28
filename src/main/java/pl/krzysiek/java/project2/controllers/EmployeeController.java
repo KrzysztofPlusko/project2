@@ -23,6 +23,7 @@ public class EmployeeController {
         return "new-employee";
     }
 
+    @GetMapping("/save")
     public String createEmployee(Employee employee, Model model) {
 
         empRepo.save(employee);
