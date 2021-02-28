@@ -38,7 +38,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="anEmployee : ${employees}">
+    <tr th:each="anEmployee : ${employeesList}">
         <td th:text="${anEmployee.firstName}"/>
         <td th:text="${anEmployee.lastName}"/>
         <td th:text="${anEmployee.email}"/>
